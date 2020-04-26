@@ -3,7 +3,7 @@ var PRIVATE_KEY =
 var CLIENT_EMAIL = 'datastudiointegration@indigo-earth-268601.iam.gserviceaccount.com';
 
 function main() {
-  var service = getService('adwords');
+  var service = getService('cloud-platform');
   service.hasAccess() ? Logger.log('--> Autenticado', service.getAccessToken()) : Logger.log('-->Não autenticado', service.getLastError());
 
 }
@@ -20,5 +20,5 @@ function getService(serviceName) {
       .setIssuer(CLIENT_EMAIL)
       // .setSubject(USER_EMAIL)
       .setPropertyStore(PropertiesService.getScriptProperties())
-      .setScope('https://adwords.google.com.br/api/adwords');
+      .setScope('https://www.googleapis.com/auth/cloud-platform');
 }

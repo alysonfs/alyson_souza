@@ -5,7 +5,13 @@ var CLIENT_EMAIL = 'datastudiointegration@indigo-earth-268601.iam.gserviceaccoun
 function main() {
   var service = getService('cloud-platform');
   service.hasAccess() ? Logger.log('--> Autenticado', service.getAccessToken()) : Logger.log('-->Não autenticado', service.getLastError());
-
+  var url = 'https://language.googleapis.com/v1beta1/documents:analyzeSentiment'
+  var response = UrlFetchApp.fetch(url, {
+    headers: {
+      Authorization: `Bearer ${service.getAccessToken()}`
+    }
+  });
+  Logger.log(JSON.stringify(response, _, 2))
 }
 
 /**

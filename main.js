@@ -31,5 +31,5 @@ function getService(serviceName) {
     .setIssuer(CLIENT_EMAIL)
     // .setSubject(USER_EMAIL)
     .setPropertyStore(PropertiesService.getScriptProperties())
-    .setScope('https://www.googleapis.com/auth/cloud-platform');
+    .setScope('https://www.googleapis.com/auth/dfp');
 }

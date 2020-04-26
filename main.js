@@ -33,5 +33,3 @@ function getService(serviceName) {
     .setPropertyStore(PropertiesService.getScriptProperties())
     .setScope('https://www.googleapis.com/auth/cloud-platform');
 }
-CampaignService
-  ? hl = pt - br

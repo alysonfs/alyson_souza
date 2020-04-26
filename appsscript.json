@@ -1,6 +1,12 @@
 {
   "timeZone": "America/Argentina/Buenos_Aires",
   "dependencies": {
+    "libraries": [{
+      "userSymbol": "OAuth2",
+      "libraryId": "1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF",
+      "version": "38",
+      "developmentMode": true
+    }]
   },
   "exceptionLogging": "STACKDRIVER",
   "runtimeVersion": "V8"

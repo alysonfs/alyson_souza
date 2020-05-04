@@ -11,10 +11,20 @@
   "oauthScopes": [
     "https://www.googleapis.com/auth/spreadsheets",    
     "https://www.googleapis.com/auth/adwords",
-    "https://www.googleapis.com/auth/script.external_request",
-    "https://www.googleapis.com/auth/cloud-platform",
+    "https://www.googleapis.com/auth/script.external_request",    
     "https://www.googleapis.com/auth/dfp"
   ],
   "exceptionLogging": "STACKDRIVER",
-  "runtimeVersion": "V8"
+  "runtimeVersion": "V8",
+  "dataStudio": {
+    "name": "GAM - To BeGrowth",
+    "logoUrl": "https://d3v0px0pttie1i.cloudfront.net/uploads/user/avatar/5216419/0e44ec68.jpeg",
+    "company": "Be Growth - Alyson Souza",
+    "companyUrl": "",
+    "addonUrl": "https://begrowth/data-studio-connector",
+    "supportUrl": "https://begrowth/data-studio-connector/support",
+    "description": "Gera relatório de dados do Google Ads Manager",
+    "sources": ["ads"],
+    "authType": ["NONE"]
+  }
 }

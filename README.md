@@ -39,3 +39,21 @@ Data prevista para entrega: 29/04/2020
       1. [ ] Date
 2. [ ] Armazenar dados extraídos para um Data Source ( Google Sheets );
 3. [ ] Montar relatório no Google Data Studio usando os dados armazenados no Data Source;
+
+
+Nome:
+datastudiointegration@indigo-earth-268601.iam.gserviceaccount.com
+
+Código exclusivo:
+102809075433220068476
+
+applicationName:
+datastudiointegration
+
+jsonKeyFilePath: (mesmo arquivo)
+
+Network_code:
+21862753527
+
+Código da chave:
+7acd2029469be287ee109a52bd2201278fc477a5

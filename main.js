@@ -3,6 +3,17 @@ var PRIVATE_KEY =
 var CLIENT_EMAIL = 'datastudiointegration@indigo-earth-268601.iam.gserviceaccount.com';
 var REPORT_TYPE = 'AD_PERFORMANCE_REPORT'
 
+// MOCK Do resultado GAM
+var resultGamApiMock = [
+  { date: '2020/03/18', totalImpressions: 134085, totalClicks: 2779, totalCpmCpcRevenue: 7721.49, totalAverangeEcpm: 57.59, totalCtr: 2.07 },
+  { date: '2020/03/19', totalImpressions: 247626, totalClicks: 7902, totalCpmCpcRevenue: 22200.91, totalAverangeEcpm: 89.65, totalCtr: 3.19 },
+  { date: '2020/03/20', totalImpressions: 280682, totalClicks: 8988, totalCpmCpcRevenue: 27387.10, totalAverangeEcpm: 97.57, totalCtr: 3.20 },
+  { date: '2020/03/21', totalImpressions: 320805, totalClicks: 9881, totalCpmCpcRevenue: 28488.30, totalAverangeEcpm: 88.8, totalCtr: 3.08 },
+  { date: '2020/03/22', totalImpressions: 390425, totalClicks: 11238, totalCpmCpcRevenue: 34077.94, totalAverangeEcpm: 87.28, totalCtr: 2.88 },
+  { date: '2020/03/23', totalImpressions: 157448, totalClicks: 4057, totalCpmCpcRevenue: 11207.39, totalAverangeEcpm: 71.18, totalCtr: 2.58 },
+  { date: '2020/03/24', totalImpressions: 219932, totalClicks: 8573, totalCpmCpcRevenue: 19042.44, totalAverangeEcpm: 86.58, totalCtr: 3.90 }
+]
+
 function main() {
   var service = getService('cloud-platform');
   var url = 'https://ads.google.com/apis/ads/publisher/v202002/CompanyService?wsdl'
@@ -32,4 +43,23 @@ function getService(serviceName) {
     // .setSubject(USER_EMAIL)
     .setPropertyStore(PropertiesService.getScriptProperties())
     .setScope('https://www.googleapis.com/auth/dfp');
+}
+
+newReportSheetData = (data) => {  
+  if (data && data.length > 1 ){
+    var rowSize = data.length;
+    var colSize = data[0].cell.length;
+    var reportSpreadSheet = null;
+    try {
+      reportSpreadSheet = SpreadSheetApp.create('report-result-gam_', rowSize, colSize);
+
+
+    } catch (error) {
+      Logger.log(`Erro ao criar planilha: ${error}`)
+    } finally {
+
+    }    
+  }else{
+    Logger.log('Não existe dados para criar planilha')
+  }    
 }
